@@ -18,27 +18,12 @@
 
 
 <!-- Bootstrap core CSS -->
-<link
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+   <link
 	href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css"
 	rel="stylesheet" />
 
-<!-- Favicons -->
-<link rel="apple-touch-icon"
-	href="https://getbootstrap.com/docs/5.0/assets/img/favicons/apple-touch-icon.png"
-	sizes="180x180">
-<link rel="icon"
-	href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon-32x32.png"
-	sizes="32x32" type="image/png">
-<link rel="icon"
-	href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon-16x16.png"
-	sizes="16x16" type="image/png">
-<link rel="manifest"
-	href="https://getbootstrap.com/docs/5.0/assets/img/favicons/manifest.json">
-<link rel="mask-icon"
-	href="https://getbootstrap.com/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" />
-<link rel="icon"
-	href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon.ico">
-<meta name="theme-color" content="#7952b3">
+
 
  <!-- link PARA LOS ICONOS DE EDITAR Y ELIMINAR -->
     <script src="https://kit.fontawesome.com/8d20d6c8c4.js"
@@ -123,7 +108,11 @@
 						            <tr>
 										<th>Id Producto</th>
 										<th>Nombre Producto</th>
+										<th>Precio</th>
+										<th>Descuento</th>
 										<th>Categoria</th>
+										<th>Imagen Producto</th>
+										
 						            </tr>
 						          </thead>
 						          <tbody>
@@ -131,7 +120,13 @@
 									<tr>
 										<td><c:out value="${lrep.getId()}" /></td>
 										<td><c:out value="${lrep.getNombre()}" /></td>
+										<td><c:out value="${lrep.getPrecio()}" /></td>
+										<td><c:out value="${lrep.getDescuento()}" /></td>
                                         <td><c:out value="${lrep.getDescripcion()}" /></td>
+                                        <td>
+					                    
+					                    <img class="d-flex ml-3 rounded" alt="${lrep.getNombre()}" src="${lrep.getUrl_imagen()}" width="100">
+				                      	</td> 
 									</tr>
 									</c:forEach>
 						          </tbody>
